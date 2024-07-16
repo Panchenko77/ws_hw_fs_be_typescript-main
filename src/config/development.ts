@@ -1,4 +1,7 @@
 import ConfigInterface from './ConfigInterface';
+import PortfolioEntity from '../entities/PortfolioEntity';
+import PageEntity from '../entities/PageEntity';
+import PortfolioVersion from '../entities/PortfolioVersion';
 
 const config: ConfigInterface = {
   env: 'development',
@@ -7,7 +10,7 @@ const config: ConfigInterface = {
     cache: false,
     database: ':memory:',
     dropSchema: true,
-    entities: ['src/entities/*.ts'],
+    entities: [PortfolioEntity, PageEntity, PortfolioVersion],
     logger: 'advanced-console' as const,
     synchronize: true,
   },
